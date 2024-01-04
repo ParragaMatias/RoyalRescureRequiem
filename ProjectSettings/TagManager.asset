@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - SalidaCastillo
+  - BelleNPC
+  - PlayerTag
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Player
+  - Enemy
+  - Attack
+  - EnemyAttack
+  - GhostEnemy
+  - WoodMusicTrigger
+  - VillageMusicTrigger
+  - BrujitaNPC
+  - BelleNPC
+  - 
+  - 
+  - Minimap
+  - MinimapIcons
+  - CosasInvisbles
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Piso
+    uniqueID: 1197609263
+    locked: 0
+  - name: Medio
+    uniqueID: 427368175
+    locked: 0
+  - name: Medio mas
+    uniqueID: 2779437353
+    locked: 0
+  - name: Personajes
+    uniqueID: 4196978873
+    locked: 0
+  - name: Arriba
+    uniqueID: 2374547975
+    locked: 0
