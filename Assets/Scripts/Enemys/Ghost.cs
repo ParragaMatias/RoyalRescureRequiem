@@ -46,11 +46,20 @@ public class Ghost : MonoBehaviour
 
     public AudioClip deadClip, shootClip;
 
+    [Header("Animator")]
+    [SerializeField] private string _animAttackTriggerName;
+    [SerializeField] private string _animDeathTriggerName;
+
+    private Animator _animator;
+
     void Awake()
     {
         myAudioSource = GetComponent<AudioSource>();
+        
+        _animator = GetComponent<Animator>();
 
         target = GameObject.FindGameObjectWithTag("PlayerTag");
+
     }
     
     void Start()
@@ -74,6 +83,8 @@ public class Ghost : MonoBehaviour
                 if(attackTimer >= cooldownAttack)
                 {
                     EnemyAttack newAttack = Instantiate(ghostAttack, transform.position, Quaternion.identity);
+
+                    _animator.SetTrigger(_animAttackTriggerName);
 
                     myAudioSource.PlayOneShot(shootClip);
 
@@ -115,7 +126,7 @@ public class Ghost : MonoBehaviour
         if(actualLife <= 0)
         {
             print("El enemigo murio");
-            Die();
+            StartCoroutine(Die());
             return;
         }
 
@@ -146,9 +157,11 @@ public class Ghost : MonoBehaviour
         damageTake = false;
     }
 
-    void Die()
+    private IEnumerator Die()
     {
+        _animator.SetTrigger(_animDeathTriggerName);
         myAudioSource.PlayOneShot(deadClip);
+        yield return new WaitForSeconds(1f);
         Destroy(gameObject);
     }
 

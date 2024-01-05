@@ -115,7 +115,7 @@ Transform:
   m_GameObject: {fileID: 5023905052649146917}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 20.58, y: 20.58, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1395103277}
@@ -201,6 +201,8 @@ MonoBehaviour:
   cooldownAttack: 2
   deadClip: {fileID: 8300000, guid: 4789e4e38657eff42a731d20738daa0f, type: 3}
   shootClip: {fileID: 8300000, guid: 2a33e9f71d511db46996a2a69b5c8b52, type: 3}
+  _animAttackTriggerName: Attack
+  _animDeathTriggerName: Death
 --- !u!50 &5023905052649146918
 Rigidbody2D:
   serializedVersion: 4
@@ -248,7 +250,7 @@ Animator:
   m_GameObject: {fileID: 5023905052649146917}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 26d7ee0c33192594485c99979233be45, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
