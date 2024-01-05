@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0f5170f4a738f474383b189037efb0d9
+guid: 08d6df2afd1f9d146a34b6bdab8738fb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -63,7 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
-  cookieLightType: 1
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -90,31 +90,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: Server
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -129,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fantasmita_0
+      name: Mala hab flotando-Sheet_0
       rect:
         serializedVersion: 2
-        x: 5
+        x: 0
         y: 0
-        width: 21
-        height: 33
+        width: 32
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12919f5d5a83940b0800000000000000
-      internalID: -5743997564823725791
+      spriteID: c15c35eee4bc2954cbb9cdae772fbc9a
+      internalID: 337059641
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fantasmita_1
+      name: Mala hab flotando-Sheet_1
       rect:
         serializedVersion: 2
-        x: 37
+        x: 32
         y: 0
-        width: 21
-        height: 34
+        width: 32
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9bc10e04ffa162ed0800000000000000
-      internalID: -2439232464567132999
+      spriteID: bda285fed71769643b993d475da4e76f
+      internalID: -1306784672
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fantasmita_2
+      name: Mala hab flotando-Sheet_2
       rect:
         serializedVersion: 2
-        x: 69
+        x: 64
         y: 0
-        width: 21
-        height: 35
+        width: 32
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3af455193b244e10800000000000000
-      internalID: 2180915643725183550
+      spriteID: 57f5e424413c0ee429144f2e57fe9ed2
+      internalID: 1124048482
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fantasmita_3
+      name: Mala hab flotando-Sheet_3
       rect:
         serializedVersion: 2
-        x: 100
+        x: 96
         y: 0
-        width: 22
-        height: 35
+        width: 32
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,20 +182,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 785921da6ca0380a0800000000000000
-      internalID: -6880643957268507257
+      spriteID: 3bf09d3f586075548b85298d0ff2189d
+      internalID: 225266650
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fantasmita_4
+      name: Mala hab flotando-Sheet_4
       rect:
         serializedVersion: 2
-        x: 132
+        x: 128
         y: 0
-        width: 22
-        height: 34
+        width: 32
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -227,29 +203,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 817524700fd415c00800000000000000
-      internalID: 887576294877976344
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fantasmita_5
-      rect:
-        serializedVersion: 2
-        x: 164
-        y: 0
-        width: 22
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 14d1f74b5d03b5000800000000000000
-      internalID: 25667917295066433
+      spriteID: af17a779ad8584b4481fd3a610e6225d
+      internalID: 582920797
       vertices: []
       indices: 
       edges: []
@@ -265,12 +220,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Fantasmita_1: -2439232464567132999
-      Fantasmita_0: -5743997564823725791
-      Fantasmita_4: 887576294877976344
-      Fantasmita_2: 2180915643725183550
-      Fantasmita_5: 25667917295066433
-      Fantasmita_3: -6880643957268507257
+      Mala hab flotando-Sheet_4: 582920797
+      Mala hab flotando-Sheet_1: -1306784672
+      Mala hab flotando-Sheet_3: 225266650
+      Mala hab flotando-Sheet_2: 1124048482
+      Mala hab flotando-Sheet_0: 337059641
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
