@@ -18,14 +18,21 @@ public class BlorbEnemy : MonoBehaviour, IDamageable
     [SerializeField] private float _rollTime;
     [SerializeField] private float _rollStunTime;
 
+    [Header("Animator")]
+    [SerializeField] private string _animWalkBoolName;
+    [SerializeField] private string _animTriggerAtkName1;
+    [SerializeField] private string _animTriggerAtkName2;
+    [SerializeField] private string _animTriggerAtkName3;
+    [SerializeField] private string _animDeathTriggerName;
+    [SerializeField] private string _animDamageTriggerName;
+
     [SerializeField] private GameObject _target;
-    [SerializeField] private GameObject _rollWP;
 
     private float _actualHP;
     private bool _targetDetected;
     private bool _canRoll;
     private bool _rollEnd;
-    private bool _canMove;
+    private bool _isAlive = true;
 
     private Vector3 _knockDir;
 
@@ -45,6 +52,8 @@ public class BlorbEnemy : MonoBehaviour, IDamageable
 
     private void Update()
     {
+        if (!_isAlive) { return; }
+
         IsEnemyDetected();
 
         if (Vector3.Distance(transform.position, _target.transform.position) <= _stopDistance && !_canRoll) StartCoroutine(RollAttack());
@@ -52,8 +61,8 @@ public class BlorbEnemy : MonoBehaviour, IDamageable
 
     private void FixedUpdate()
     {
-        if (!_canMove) return;
         if(_targetDetected && _rollEnd) Movement();
+        else { _animator.SetBool(_animWalkBoolName, false); }
     }
 
     private void IsEnemyDetected()
@@ -65,7 +74,7 @@ public class BlorbEnemy : MonoBehaviour, IDamageable
 
     private IEnumerator RollAttack()
     {
-        _canMove = false;
+        _animator.SetTrigger(_animTriggerAtkName1);
         if (!_canRoll)
         {
             _canRoll = true;
@@ -73,18 +82,19 @@ public class BlorbEnemy : MonoBehaviour, IDamageable
         }
         _rb.velocity = Vector3.zero;
         yield return new WaitForSeconds(0.5f);
+        _animator.SetTrigger(_animTriggerAtkName2);
 
         Vector3 attackDir = (_target.transform.position - transform.position).normalized;
         _rb.AddForce(attackDir * _rollForce, ForceMode2D.Impulse);
         yield return new WaitForSeconds(_rollTime);
         _canRoll = false;
         _rollEnd = true;
-        yield return new WaitForSeconds(_rollStunTime);
-        _canMove = true;
+        _animator.SetTrigger(_animTriggerAtkName3);
     }
 
     private void Movement()
     {
+        _animator.SetBool(_animWalkBoolName, true);
         _knockDir = (_target.transform.position - transform.position);
 
         Vector3 dir = (_target.transform.position - transform.position).normalized;
@@ -100,10 +110,12 @@ public class BlorbEnemy : MonoBehaviour, IDamageable
 
     public void TakeDamage(int dmg)
     {
+        _animator.SetTrigger(_animDamageTriggerName);
         Vector2 instPos = _target.transform.position;
         Vector2 knockbackDirection = ((Vector2)transform.position - instPos).normalized;
         KnockBackAplly(knockbackDirection);
         _actualHP -= dmg;
+        _animator.SetTrigger("GoIddle");
 
         if( _actualHP <= 0 )
         {
@@ -113,7 +125,10 @@ public class BlorbEnemy : MonoBehaviour, IDamageable
 
     private IEnumerator Die()
     {
-        Object.Destroy(gameObject);
-        yield return null;
+        _animator.SetTrigger(_animDeathTriggerName);
+        _rb.velocity = Vector3.zero;
+        _isAlive = false;
+        yield return new WaitForSeconds(1.2f);
+        Destroy(gameObject);
     }
 }
