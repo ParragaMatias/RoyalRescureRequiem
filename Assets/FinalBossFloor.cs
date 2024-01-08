@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class FinalBossFloor : MonoBehaviour
 {
@@ -9,11 +10,14 @@ public class FinalBossFloor : MonoBehaviour
     [SerializeField] private float _trapProb;
     [SerializeField] private float _trapCoolDown;
 
-    [SerializeField] private GameObject[,] _trapColliders;
+    [SerializeField] private GameObject[,] _trapSlabs;
     [SerializeField] private GameObject _cube;
 
-    [SerializeField]    private int x, y;
-    [SerializeField]    private Transform _startPoint;
+    [SerializeField] private int x, y;
+    [SerializeField] private Transform _startPoint;
+    [SerializeField] private GameObject _animatedSlab;
+
+    private Animation _animation;
 
     private bool _canTrap = true;
     private bool _isAttacking;
@@ -23,53 +27,48 @@ public class FinalBossFloor : MonoBehaviour
 
     private void Start()
     {
-        _trapColliders = new GameObject[x, y];
+        _trapSlabs = new GameObject[x, y];
 
 
-        for (int i = 0; i < _trapColliders.GetLength(0); i++)
+        for (int i = 0; i < _trapSlabs.GetLength(0); i++)
         {
-            for (int j = 0; j < _trapColliders.GetLength(1); j++)
+            for (int j = 0; j < _trapSlabs.GetLength(1); j++)
             {
                 _trapIndex++;
                 Vector3 coordinates = new Vector3(i, j);
                 var x = Instantiate(_cube, _startPoint.position + coordinates, Quaternion.identity);
-                _trapColliders[i, j] = x;
+
+                _trapSlabs[i, j] = x;
+                x.SetActive(false);
             }
         }
+
+        TrapSetter();
     }
 
     private void Update()
     {
-        if (!_isEventOn) return;
+        //if (!_isEventOn) return;
         
-        if (_isAttacking)
-        {
-            if (_canTrap) TrapSetter();
-        }
+        if (_canTrap) StartCoroutine(TrapSetter());
+        
     }
 
-    private void TrapSetter()
+    private IEnumerator TrapSetter()
     {        
         _canTrap = false;
         StartCoroutine(TrapCoolDown(_trapCoolDown));
 
-        for (int i = 0; i < _trapColliders.GetLength(0); i++)
+        yield return new WaitForSeconds(0.5f);
+        for (int i = 0; i < _trapSlabs.GetLength(0); i++)
         {
-            for (int j = 0; j < _trapColliders.GetLength(1); j++)
-            {                
-                var sprite = _trapColliders[i, j].GetComponent<SpriteRenderer>();
-                sprite.color = Color.red;                
-            }
-        }
-        for (int i = 0; i < _trapColliders.GetLength(0); i++)
-        {
-            for (int j = 0; j < _trapColliders.GetLength(1); j++)
+            for (int j = 0; j < _trapSlabs.GetLength(1); j++)
             {
                 var x = IsTrapSet(_trapProb);
                 if (x)
-                {
-                    var sprite = _trapColliders[i, j].GetComponent<SpriteRenderer>();
-                    sprite.color = Color.white;
+                { 
+                    Instantiate(_animatedSlab, _trapSlabs[i, j].transform.position, Quaternion.identity);
+                    _trapSlabs[i, j].SetActive(true);
                 }
             }
         }
@@ -82,12 +81,20 @@ public class FinalBossFloor : MonoBehaviour
 
         if(prob >= num) return true;
 
-        else  return false; 
+        else  return false;
     }
 
     private IEnumerator TrapCoolDown(float cooldown)
     {
         yield return new WaitForSeconds(cooldown + Random.Range(1, 3));
+        
+        for (int i = 0; i < _trapSlabs.GetLength(0); i++)
+        {
+            for (int j = 0; j < _trapSlabs.GetLength(1); j++)
+            {
+                if (_trapSlabs[i, j].activeSelf == true) _trapSlabs[i, j].SetActive(false);
+            }
+        }
         _canTrap = true;
     }
 }
