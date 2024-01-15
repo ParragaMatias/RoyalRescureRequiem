@@ -68,11 +68,19 @@ public class FinalBossFloor : MonoBehaviour
                 if (x)
                 { 
                     Instantiate(_animatedSlab, _trapSlabs[i, j].transform.position, Quaternion.identity);
-                    _trapSlabs[i, j].SetActive(true);
+                    StartCoroutine(Damage(i, j));
                 }
             }
         }
        
+    }
+
+    private IEnumerator Damage(int i, int j)
+    {
+        yield return new WaitForSeconds(1.5f);
+        _trapSlabs[i, j].SetActive(true);
+        yield return new WaitForSeconds(.5f);
+        _trapSlabs[i, j].SetActive(false);
     }
 
     private bool IsTrapSet(float prob)

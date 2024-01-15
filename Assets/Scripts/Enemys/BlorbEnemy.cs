@@ -48,6 +48,7 @@ public class BlorbEnemy : MonoBehaviour, IDamageable
     {
         _actualHP = _maxHP;
         _animator = GetComponentInChildren<Animator>();
+        _target = GameObject.FindGameObjectWithTag("PlayerTag");
     }
 
     private void Update()

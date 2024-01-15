@@ -86,6 +86,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dmg: 5
+  _enemyLayer: 7
 --- !u!114 &4720628740318110439
 MonoBehaviour:
   m_ObjectHideFlags: 0
