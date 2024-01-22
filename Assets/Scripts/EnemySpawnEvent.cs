@@ -5,6 +5,13 @@ using UnityEngine;
 
 public class EnemySpawnEvent : MonoBehaviour
 {
+    [Header("Animator")]
+    private Animator _anim;
+    [SerializeField] private string _spawnEventAnim;
+    [SerializeField] private string _dmgEventAnim;
+    [SerializeField] private string _flyEventAnim;
+    [SerializeField] private string _deathEventAnim;
+
     [SerializeField] private GameObject _target;
     [SerializeField] private GameObject _enemy;
 
