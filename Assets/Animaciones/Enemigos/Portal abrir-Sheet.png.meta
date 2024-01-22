@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3a120c9e8fdf98345bd3b0f5382e1c5a
+guid: e733fe8d5c046f741a273c7efa72966f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Protagonista_Caminata_derecha-Sheet_0
+      name: Portal abrir-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,41 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b7b21934314eb4409b4b5aaaa400ac4
-      internalID: -1433869334
+      spriteID: 9fd93752c509129479f83f1e94d629ea
+      internalID: -1762999357
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Protagonista_Caminata_derecha-Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 383089fd6fe541c49b26626e0c553693
-      internalID: -959959660
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Protagonista_Caminata_derecha-Sheet_2
+      name: Portal abrir-Sheet_1
       rect:
         serializedVersion: 2
         x: 64
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,41 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e62b7f86dd95b848939ec4322ce26d1
-      internalID: 1213695564
+      spriteID: 8f17428cebac77e428fbe8b83ccfe103
+      internalID: 1179919807
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Protagonista_Caminata_derecha-Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 66687fe5d466a7c48be3856346b339e5
-      internalID: 97122775
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Protagonista_Caminata_derecha-Sheet_4
+      name: Portal abrir-Sheet_2
       rect:
         serializedVersion: 2
         x: 128
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,41 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 887061613878cf6448422ff491ed8b80
-      internalID: 167277302
+      spriteID: 2649eccbe420afa4880fb1f69b7b7975
+      internalID: -1410535163
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Protagonista_Caminata_derecha-Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4c8ca78cecf4feb4ab89f87e6899dce9
-      internalID: -1382548178
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Protagonista_Caminata_derecha-Sheet_6
+      name: Portal abrir-Sheet_3
       rect:
         serializedVersion: 2
         x: 192
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -245,20 +182,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 583c9e4213f68cb49a49389bf2748842
-      internalID: 401609450
+      spriteID: 6eead5049c11a854b9175000373615ab
+      internalID: 415795155
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Protagonista_Caminata_derecha-Sheet_7
+      name: Portal abrir-Sheet_4
       rect:
         serializedVersion: 2
-        x: 224
+        x: 256
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -266,8 +203,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 961cc4104608cd74291ad87955b5eb7b
-      internalID: 1603120630
+      spriteID: 71bdb47252fe7a3459b67d8f1efd7e7d
+      internalID: 691514662
       vertices: []
       indices: 
       edges: []
@@ -283,14 +220,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Protagonista_Caminata_derecha-Sheet_0: -1433869334
-      Protagonista_Caminata_derecha-Sheet_7: 1603120630
-      Protagonista_Caminata_derecha-Sheet_6: 401609450
-      Protagonista_Caminata_derecha-Sheet_1: -959959660
-      Protagonista_Caminata_derecha-Sheet_3: 97122775
-      Protagonista_Caminata_derecha-Sheet_5: -1382548178
-      Protagonista_Caminata_derecha-Sheet_4: 167277302
-      Protagonista_Caminata_derecha-Sheet_2: 1213695564
+      Portal abrir-Sheet_1: 1179919807
+      Portal abrir-Sheet_3: 415795155
+      Portal abrir-Sheet_2: -1410535163
+      Portal abrir-Sheet_0: -1762999357
+      Portal abrir-Sheet_4: 691514662
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
