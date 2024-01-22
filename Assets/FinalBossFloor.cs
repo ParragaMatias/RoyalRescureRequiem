@@ -10,6 +10,10 @@ public class FinalBossFloor : MonoBehaviour
     [SerializeField] private float _trapProb;
     [SerializeField] private float _trapCoolDown;
 
+    [Header("Timer Values")]
+    [SerializeField] private float _dmgStartDmg;
+    [SerializeField] private float _dmgEndDmg;
+
     [SerializeField] private GameObject[,] _trapSlabs;
     [SerializeField] private GameObject _cube;
 

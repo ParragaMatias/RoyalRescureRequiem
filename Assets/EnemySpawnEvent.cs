@@ -11,7 +11,7 @@ public class EnemySpawnEvent : MonoBehaviour
     [SerializeField] private float _enemyAmmount;
     [SerializeField] private float _cooldown;
 
-    private bool _canSpawn = true;
+    [SerializeField] private bool _canSpawn = true;
 
     private float _coordinatesX, _coordinatesY;
 
