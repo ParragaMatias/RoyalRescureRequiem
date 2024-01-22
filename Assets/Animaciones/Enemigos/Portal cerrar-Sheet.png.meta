@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3a120c9e8fdf98345bd3b0f5382e1c5a
+guid: eb08adea46aec304e8060756c532aa58
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Protagonista_Caminata_derecha-Sheet_0
+      name: Portal cerrar-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,41 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b7b21934314eb4409b4b5aaaa400ac4
-      internalID: -1433869334
+      spriteID: 7581a1b2dda51af45b21e361b1023291
+      internalID: 1663705620
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Protagonista_Caminata_derecha-Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 383089fd6fe541c49b26626e0c553693
-      internalID: -959959660
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Protagonista_Caminata_derecha-Sheet_2
+      name: Portal cerrar-Sheet_1
       rect:
         serializedVersion: 2
         x: 64
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,41 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e62b7f86dd95b848939ec4322ce26d1
-      internalID: 1213695564
+      spriteID: cb27b7ba3a372394a8ee0911103b24fd
+      internalID: 1854501332
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Protagonista_Caminata_derecha-Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 66687fe5d466a7c48be3856346b339e5
-      internalID: 97122775
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Protagonista_Caminata_derecha-Sheet_4
+      name: Portal cerrar-Sheet_2
       rect:
         serializedVersion: 2
         x: 128
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,41 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 887061613878cf6448422ff491ed8b80
-      internalID: 167277302
+      spriteID: 0f374786dd0df1446ab2fd77179047b3
+      internalID: -745742190
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Protagonista_Caminata_derecha-Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4c8ca78cecf4feb4ab89f87e6899dce9
-      internalID: -1382548178
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Protagonista_Caminata_derecha-Sheet_6
+      name: Portal cerrar-Sheet_3
       rect:
         serializedVersion: 2
         x: 192
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -245,20 +182,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 583c9e4213f68cb49a49389bf2748842
-      internalID: 401609450
+      spriteID: 6414ff5d001d8044cbc5b74849bd964c
+      internalID: 2076292502
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Protagonista_Caminata_derecha-Sheet_7
+      name: Portal cerrar-Sheet_4
       rect:
         serializedVersion: 2
-        x: 224
+        x: 256
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -266,8 +203,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 961cc4104608cd74291ad87955b5eb7b
-      internalID: 1603120630
+      spriteID: 7d2848e8b382e0d4898a8cff4a01dc6b
+      internalID: -830591668
       vertices: []
       indices: 
       edges: []
@@ -283,14 +220,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Protagonista_Caminata_derecha-Sheet_0: -1433869334
-      Protagonista_Caminata_derecha-Sheet_7: 1603120630
-      Protagonista_Caminata_derecha-Sheet_6: 401609450
-      Protagonista_Caminata_derecha-Sheet_1: -959959660
-      Protagonista_Caminata_derecha-Sheet_3: 97122775
-      Protagonista_Caminata_derecha-Sheet_5: -1382548178
-      Protagonista_Caminata_derecha-Sheet_4: 167277302
-      Protagonista_Caminata_derecha-Sheet_2: 1213695564
+      Portal cerrar-Sheet_4: -830591668
+      Portal cerrar-Sheet_0: 1663705620
+      Portal cerrar-Sheet_2: -745742190
+      Portal cerrar-Sheet_1: 1854501332
+      Portal cerrar-Sheet_3: 2076292502
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

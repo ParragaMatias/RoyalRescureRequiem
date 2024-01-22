@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3a120c9e8fdf98345bd3b0f5382e1c5a
+guid: fc0af02ce7dacd64bb02bd4317c414ee
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Protagonista_Caminata_derecha-Sheet_0
+      name: "Protagonista arriba da\xF1oase-Sheet_0"
       rect:
         serializedVersion: 2
         x: 0
@@ -119,14 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b7b21934314eb4409b4b5aaaa400ac4
-      internalID: -1433869334
+      spriteID: 7a3a0cbb91ecde845af0bfec99a475c3
+      internalID: -574137014
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Protagonista_Caminata_derecha-Sheet_1
+      name: "Protagonista arriba da\xF1oase-Sheet_1"
       rect:
         serializedVersion: 2
         x: 32
@@ -140,14 +140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 383089fd6fe541c49b26626e0c553693
-      internalID: -959959660
+      spriteID: 5e2cbc71bb0fc1e4bacfeb7a40e72242
+      internalID: -1871309663
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Protagonista_Caminata_derecha-Sheet_2
+      name: "Protagonista arriba da\xF1oase-Sheet_2"
       rect:
         serializedVersion: 2
         x: 64
@@ -161,14 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e62b7f86dd95b848939ec4322ce26d1
-      internalID: 1213695564
+      spriteID: f96a462882dc7c64cb7012099c6d08a4
+      internalID: -477253074
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Protagonista_Caminata_derecha-Sheet_3
+      name: "Protagonista arriba da\xF1oase-Sheet_3"
       rect:
         serializedVersion: 2
         x: 96
@@ -182,92 +182,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66687fe5d466a7c48be3856346b339e5
-      internalID: 97122775
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Protagonista_Caminata_derecha-Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 887061613878cf6448422ff491ed8b80
-      internalID: 167277302
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Protagonista_Caminata_derecha-Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4c8ca78cecf4feb4ab89f87e6899dce9
-      internalID: -1382548178
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Protagonista_Caminata_derecha-Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 583c9e4213f68cb49a49389bf2748842
-      internalID: 401609450
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Protagonista_Caminata_derecha-Sheet_7
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 961cc4104608cd74291ad87955b5eb7b
-      internalID: 1603120630
+      spriteID: dd1a119b47bae214d86067645ccf100e
+      internalID: -39715119
       vertices: []
       indices: 
       edges: []
@@ -283,14 +199,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Protagonista_Caminata_derecha-Sheet_0: -1433869334
-      Protagonista_Caminata_derecha-Sheet_7: 1603120630
-      Protagonista_Caminata_derecha-Sheet_6: 401609450
-      Protagonista_Caminata_derecha-Sheet_1: -959959660
-      Protagonista_Caminata_derecha-Sheet_3: 97122775
-      Protagonista_Caminata_derecha-Sheet_5: -1382548178
-      Protagonista_Caminata_derecha-Sheet_4: 167277302
-      Protagonista_Caminata_derecha-Sheet_2: 1213695564
+      "Protagonista arriba da\xF1oase-Sheet_2": -477253074
+      "Protagonista arriba da\xF1oase-Sheet_1": -1871309663
+      "Protagonista arriba da\xF1oase-Sheet_0": -574137014
+      "Protagonista arriba da\xF1oase-Sheet_3": -39715119
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
