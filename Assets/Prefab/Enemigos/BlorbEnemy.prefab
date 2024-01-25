@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4720628740318110439}
   m_Layer: 7
   m_Name: BlorbEnemy
-  m_TagString: Untagged
+  m_TagString: BlorbEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7b5ab3a41b2f0544b5734dd2cef1303, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHP: 10
+  _maxHP: 5
   _speed: 3
   _dmg: 5
   _viewDistance: 10
@@ -115,6 +115,7 @@ MonoBehaviour:
   _animDeathTriggerName: Death
   _animDamageTriggerName: Damage
   _target: {fileID: 0}
+  _heal: {fileID: 6834101893336515371, guid: 4a7ead36585e184429326929152c0b82, type: 3}
 --- !u!1 &4720628741360736065
 GameObject:
   m_ObjectHideFlags: 0

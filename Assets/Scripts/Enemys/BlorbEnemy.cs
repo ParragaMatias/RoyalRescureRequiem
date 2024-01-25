@@ -27,6 +27,7 @@ public class BlorbEnemy : MonoBehaviour, IDamageable
     [SerializeField] private string _animDamageTriggerName;
 
     [SerializeField] private GameObject _target;
+    [SerializeField] private GameObject _heal;
 
     private float _actualHP;
     private bool _targetDetected;
@@ -49,6 +50,7 @@ public class BlorbEnemy : MonoBehaviour, IDamageable
         _actualHP = _maxHP;
         _animator = GetComponentInChildren<Animator>();
         _target = GameObject.FindGameObjectWithTag("PlayerTag");
+        //_heal = GameObject.FindGameObjectWithTag("HealTag");
     }
 
     private void Update()
@@ -126,6 +128,7 @@ public class BlorbEnemy : MonoBehaviour, IDamageable
 
     private IEnumerator Die()
     {
+        Instantiate(_heal, transform.position, Quaternion.identity);
         _animator.SetTrigger(_animDeathTriggerName);
         _rb.velocity = Vector3.zero;
         _isAlive = false;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Player : MonoBehaviour, IDamageable
+public class Player : MonoBehaviour, IDamageable, IHeleable
 {
     public float maxLife = 20f;
 
@@ -368,5 +368,18 @@ public class Player : MonoBehaviour, IDamageable
 
         print("Vida Actual = " + currentLife);
 
+    }
+
+    public void TakeHeal(int heal)
+    {
+        currentLife += heal;
+        if (currentLife >= maxLife) currentLife = maxLife;
+
+        StaticData.lastHealth = currentLife;
+
+        percentil = StaticData.lastHealth / maxLife;
+        canvasManager.UpdateLife(percentil, StaticData.lastHealth);
+
+        print("Vida Actual = " + currentLife);
     }
 }

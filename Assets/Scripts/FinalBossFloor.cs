@@ -22,6 +22,7 @@ public class FinalBossFloor : MonoBehaviour
     [SerializeField] private GameObject _animatedSlab;
 
     private Animation _animation;
+    [SerializeField] private EnemySpawnEvent _enemySpawnEvent;
 
     private bool _canTrap = true;
     private bool _isAttacking;
@@ -52,6 +53,8 @@ public class FinalBossFloor : MonoBehaviour
 
     private void Update()
     {
+        if (_enemySpawnEvent._isLive == false) return;
+
         //if (!_isEventOn) return;
         
         if (_canTrap) StartCoroutine(TrapSetter());

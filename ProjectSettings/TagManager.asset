@@ -8,6 +8,8 @@ TagManager:
   - BelleNPC
   - PlayerTag
   - AnimatedSlabs
+  - BlorbEnemy
+  - HealTag
   layers:
   - Default
   - TransparentFX
