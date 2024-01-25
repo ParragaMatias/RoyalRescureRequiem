@@ -85,7 +85,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29d55cd262339bb4f88952585e69d537, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dmg: 5
+  _dmg: 3
   _enemyLayer: 7
 --- !u!114 &4720628740318110439
 MonoBehaviour:
