@@ -8,40 +8,20 @@ public class NPC : MonoBehaviour
 
     [SerializeField] private GameObject dialogueMark;
     [SerializeField] private GameObject dialoguePanel;
+    [SerializeField] private ImageManager _imagemanaManager;
+    [SerializeField] private CanvasAnimation m_Animation;
     [SerializeField] private TMP_Text dialogueText;
     [SerializeField, TextArea(4,6)] private string[] dialogueLines;
     public float dialogueTime;
     private bool isPlayerInRange;
     private bool didDialogueStart;
     private int lineIndex;
-
-    public GameObject brujitaImage;
-    public GameObject belleImage;
-    public GameObject princessImage;
-    public GameObject michiImage;
-
     
     void Update()
     {
+
         if(isPlayerInRange == true && Input.GetKeyDown(KeyCode.F))
         {
-
-            if(gameObject.layer == 13)
-            {
-                brujitaImage.SetActive(true);
-            }
-            if(gameObject.layer == 14)
-            {
-                belleImage.SetActive(true);
-            }
-            if(gameObject.layer == 15)
-            {
-                princessImage.SetActive(true);
-            }
-            if(gameObject.layer == 16)
-            {
-                michiImage.SetActive(true);
-            }
 
             if(!didDialogueStart)
             {
@@ -61,6 +41,8 @@ public class NPC : MonoBehaviour
 
     private void StartDialogue()
     {
+        m_Animation.Func_PlayUIAnim();
+        _imagemanaManager._showImage = true;
         didDialogueStart = true;
         dialoguePanel.SetActive(true);
         dialogueMark.SetActive(false);
@@ -83,11 +65,7 @@ public class NPC : MonoBehaviour
             dialogueMark.SetActive(true);
             Time.timeScale = 1f;
 
-            brujitaImage.SetActive(false);
-            belleImage.SetActive(false);
-            princessImage.SetActive(false);
-            michiImage.SetActive(false);
-        
+            _imagemanaManager._showImage = false;
         }
         
     }
