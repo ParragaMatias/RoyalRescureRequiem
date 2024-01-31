@@ -237,7 +237,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7983366589347776218, guid: 859aeb640280b614e87c055c63fd851e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.41
+      value: -0.52
       objectReference: {fileID: 0}
     - target: {fileID: 7983366589347776218, guid: 859aeb640280b614e87c055c63fd851e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -735,6 +735,157 @@ Transform:
   m_Father: {fileID: 101180542}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &667169137
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2037234601}
+    m_Modifications:
+    - target: {fileID: 4665715628979553590, guid: 708a3ac20bfa5f44ca2892aa9070a9c7, type: 3}
+      propertyPath: m_Name
+      value: Sirvienta Preocupada (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665715628979553591, guid: 708a3ac20bfa5f44ca2892aa9070a9c7, type: 3}
+      propertyPath: m_Animation
+      value: 
+      objectReference: {fileID: 2146599689}
+    - target: {fileID: 4665715628979553591, guid: 708a3ac20bfa5f44ca2892aa9070a9c7, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 226727353}
+    - target: {fileID: 4665715628979553591, guid: 708a3ac20bfa5f44ca2892aa9070a9c7, type: 3}
+      propertyPath: dialoguePanel
+      value: 
+      objectReference: {fileID: 1509830069}
+    - target: {fileID: 4665715628979553591, guid: 708a3ac20bfa5f44ca2892aa9070a9c7, type: 3}
+      propertyPath: dialogueLines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665715628979553591, guid: 708a3ac20bfa5f44ca2892aa9070a9c7, type: 3}
+      propertyPath: dialogueLines.Array.data[0]
+      value: "\xA1Ayudanos!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665715628979553591, guid: 708a3ac20bfa5f44ca2892aa9070a9c7, type: 3}
+      propertyPath: dialogueLines.Array.data[1]
+      value: No...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665715628979553591, guid: 708a3ac20bfa5f44ca2892aa9070a9c7, type: 3}
+      propertyPath: dialogueLines.Array.data[2]
+      value: Caballera, han secuestrado a la princesa, por favor ayudanos...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665715628979553592, guid: 708a3ac20bfa5f44ca2892aa9070a9c7, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665715628979553592, guid: 708a3ac20bfa5f44ca2892aa9070a9c7, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665715628979553593, guid: 708a3ac20bfa5f44ca2892aa9070a9c7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1738139341, guid: da442604aed192b4fb25be91b293f7b4, type: 3}
+    - target: {fileID: 4665715628979553594, guid: 708a3ac20bfa5f44ca2892aa9070a9c7, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665715628979553594, guid: 708a3ac20bfa5f44ca2892aa9070a9c7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665715628979553594, guid: 708a3ac20bfa5f44ca2892aa9070a9c7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665715628979553594, guid: 708a3ac20bfa5f44ca2892aa9070a9c7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.1875
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665715628979553594, guid: 708a3ac20bfa5f44ca2892aa9070a9c7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665715628979553594, guid: 708a3ac20bfa5f44ca2892aa9070a9c7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665715628979553594, guid: 708a3ac20bfa5f44ca2892aa9070a9c7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.70875585
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665715628979553594, guid: 708a3ac20bfa5f44ca2892aa9070a9c7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665715628979553594, guid: 708a3ac20bfa5f44ca2892aa9070a9c7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665715628979553594, guid: 708a3ac20bfa5f44ca2892aa9070a9c7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665715628979553594, guid: 708a3ac20bfa5f44ca2892aa9070a9c7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665715628979553594, guid: 708a3ac20bfa5f44ca2892aa9070a9c7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665715628979553594, guid: 708a3ac20bfa5f44ca2892aa9070a9c7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665715628979553594, guid: 708a3ac20bfa5f44ca2892aa9070a9c7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665715628979553594, guid: 708a3ac20bfa5f44ca2892aa9070a9c7, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665715628979553595, guid: 708a3ac20bfa5f44ca2892aa9070a9c7, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665715628979553595, guid: 708a3ac20bfa5f44ca2892aa9070a9c7, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 708a3ac20bfa5f44ca2892aa9070a9c7, type: 3}
+--- !u!4 &667169138 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4665715628979553594, guid: 708a3ac20bfa5f44ca2892aa9070a9c7, type: 3}
+  m_PrefabInstance: {fileID: 667169137}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &667169139 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4665715628979553590, guid: 708a3ac20bfa5f44ca2892aa9070a9c7, type: 3}
+  m_PrefabInstance: {fileID: 667169137}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &667169140
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667169139}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c681a591b546e7047aed3ab720477fa2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &681320158
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20159,6 +20310,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1268143650}
+  - {fileID: 667169138}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -20355,17 +20507,33 @@ PrefabInstance:
       propertyPath: dialogueLines.Array.data[2]
       value: Caballera, han secuestrado a la princesa, por favor ayudanos...
       objectReference: {fileID: 0}
+    - target: {fileID: 4665715628979553593, guid: 708a3ac20bfa5f44ca2892aa9070a9c7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1791489699, guid: f4c0f8b68eb205a4089e8c9d4177d3e9, type: 3}
     - target: {fileID: 4665715628979553594, guid: 708a3ac20bfa5f44ca2892aa9070a9c7, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4665715628979553594, guid: 708a3ac20bfa5f44ca2892aa9070a9c7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665715628979553594, guid: 708a3ac20bfa5f44ca2892aa9070a9c7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665715628979553594, guid: 708a3ac20bfa5f44ca2892aa9070a9c7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.1875
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665715628979553594, guid: 708a3ac20bfa5f44ca2892aa9070a9c7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.4716973
+      value: -3.46
       objectReference: {fileID: 0}
     - target: {fileID: 4665715628979553594, guid: 708a3ac20bfa5f44ca2892aa9070a9c7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.52635384
+      value: -0.29
       objectReference: {fileID: 0}
     - target: {fileID: 4665715628979553594, guid: 708a3ac20bfa5f44ca2892aa9070a9c7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -20399,8 +20567,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4665715628979553594, guid: 708a3ac20bfa5f44ca2892aa9070a9c7, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 708a3ac20bfa5f44ca2892aa9070a9c7, type: 3}
+--- !u!1 &2128213379 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4665715628979553590, guid: 708a3ac20bfa5f44ca2892aa9070a9c7, type: 3}
+  m_PrefabInstance: {fileID: 2128213378}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2128213380
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128213379}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6bde923d30806b64e9ac57fa8fd49aa8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &2146599689 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 291085516, guid: 56c46bbf1938d6b48a69dda166c3d134, type: 3}
