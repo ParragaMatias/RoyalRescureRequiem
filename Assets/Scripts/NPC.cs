@@ -8,7 +8,7 @@ public class NPC : MonoBehaviour
 
     [SerializeField] private GameObject dialogueMark;
     [SerializeField] private GameObject dialoguePanel;
-    [SerializeField] private ImageManager _imagemanaManager;
+    [SerializeField] private GameObject _imageToShow;
     [SerializeField] private CanvasAnimation m_Animation;
     [SerializeField] private TMP_Text dialogueText;
     [SerializeField, TextArea(4,6)] private string[] dialogueLines;
@@ -41,8 +41,7 @@ public class NPC : MonoBehaviour
 
     private void StartDialogue()
     {
-        m_Animation.Func_PlayUIAnim();
-        _imagemanaManager._showImage = true;
+        m_Animation.Func_PlayUIAnim(_imageToShow);
         didDialogueStart = true;
         dialoguePanel.SetActive(true);
         dialogueMark.SetActive(false);
@@ -65,7 +64,8 @@ public class NPC : MonoBehaviour
             dialogueMark.SetActive(true);
             Time.timeScale = 1f;
 
-            _imagemanaManager._showImage = false;
+            m_Animation.Func_StopUIAnim();
+            _imageToShow.SetActive(false);
         }
         
     }

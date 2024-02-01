@@ -11,17 +11,20 @@ public class CanvasAnimation : MonoBehaviour
     [SerializeField] private float m_Speed;
 
     private int m_IndexSprite;
-    Coroutine m_CorotineAnim;
     private bool _isDone;
+    GameObject _image;
+    Coroutine m_CorotineAnim;
 
     public void Start()
     {
-        Func_PlayUIAnim();
+        //Func_PlayUIAnim(_image);
     }
 
-    public void Func_PlayUIAnim()
+    public void Func_PlayUIAnim(GameObject image)
     {
+        _image = image;
         _isDone = false;
+        _image.SetActive(true);
         StartCoroutine(Func_PlayAnimUI());
     }
 
