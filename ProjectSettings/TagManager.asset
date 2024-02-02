@@ -50,6 +50,12 @@ TagManager:
   - name: Piso
     uniqueID: 1197609263
     locked: 0
+  - name: Decoracion
+    uniqueID: 3794493957
+    locked: 0
+  - name: Mas Decoraciones
+    uniqueID: 3542788877
+    locked: 0
   - name: Medio
     uniqueID: 427368175
     locked: 0
