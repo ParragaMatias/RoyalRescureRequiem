@@ -23,12 +23,12 @@ public class EnemySpawnEvent : MonoBehaviour, IDamageable
     [SerializeField] private float _enemyAmmount;
     [SerializeField] private float _cooldown;
 
-    [SerializeField] private bool _canSpawn = true, _eventStart, _canMove = false, _canDMG = false;
+    [SerializeField] private bool _canSpawn = true, _canMove = false, _canDMG = false;
 
     private float _coordinatesX, _coordinatesY;
     private int dir = 1;
 
-    public bool _isLive = true;
+    public bool _isLive = true , _eventStart = false;
 
 
     private void Awake()

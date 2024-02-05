@@ -28,7 +28,7 @@ public class FinalBossFloor : MonoBehaviour
     private bool _isAttacking;
     int _trapIndex = 0;
 
-    private bool _isEventOn;
+    public bool _isEventOn;
 
     private void Start()
     {
@@ -55,7 +55,7 @@ public class FinalBossFloor : MonoBehaviour
     {
         if (_enemySpawnEvent._isLive == false) return;
 
-        //if (!_isEventOn) return;
+        if (!_isEventOn) return;
         
         if (_canTrap) StartCoroutine(TrapSetter());
         

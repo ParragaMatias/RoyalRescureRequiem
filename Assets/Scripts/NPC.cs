@@ -10,6 +10,7 @@ public class NPC : MonoBehaviour
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private GameObject _imageToShow;
     [SerializeField] private CanvasAnimation m_Animation;
+    [SerializeField] private DespawnEvent _fadeTrigger;
     [SerializeField] private TMP_Text dialogueText;
     [SerializeField, TextArea(4,6)] private string[] dialogueLines;
     public float dialogueTime;
@@ -66,6 +67,8 @@ public class NPC : MonoBehaviour
 
             m_Animation.Func_StopUIAnim();
             _imageToShow.SetActive(false);
+            _fadeTrigger.FadeStartEvent();
+
         }
         
     }
