@@ -161,7 +161,7 @@ public class Player : MonoBehaviour, IDamageable, IHeleable
         
         #region Ataque en 4 direcciones
 
-        if(Input.GetKeyDown(KeyCode.Mouse0) && attackDirection == 0 && fireTimer >= fireRate)
+        if(Input.GetKeyDown(KeyCode.Mouse0) && attackDirection == 0 && fireTimer >= fireRate && StaticData._haveSword == true)
         {
             
             Attack newAttack = Instantiate(myAttack, attackArriba.position, attackArriba.rotation);
@@ -177,7 +177,7 @@ public class Player : MonoBehaviour, IDamageable, IHeleable
             stopTimer = 0;
         }
 
-        if(Input.GetKeyDown(KeyCode.Mouse0) && attackDirection == 1 && fireTimer >= fireRate)
+        if(Input.GetKeyDown(KeyCode.Mouse0) && attackDirection == 1 && fireTimer >= fireRate && StaticData._haveSword == true)
         {
             Attack newAttack = Instantiate(myAttack, attackIzquierda.position, attackArriba.rotation);
 
@@ -192,7 +192,7 @@ public class Player : MonoBehaviour, IDamageable, IHeleable
             stopTimer = 0;
         }
         
-        if(Input.GetKeyDown(KeyCode.Mouse0) && attackDirection == 2 && fireTimer >= fireRate)
+        if(Input.GetKeyDown(KeyCode.Mouse0) && attackDirection == 2 && fireTimer >= fireRate && StaticData._haveSword == true)
         {
             Attack newAttack = Instantiate(myAttack, attackDerecha.position, attackArriba.rotation);
 
@@ -207,7 +207,7 @@ public class Player : MonoBehaviour, IDamageable, IHeleable
             stopTimer = 0;
         }
 
-        if(Input.GetKeyDown(KeyCode.Mouse0) && attackDirection == 3 && fireTimer >= fireRate)
+        if(Input.GetKeyDown(KeyCode.Mouse0) && attackDirection == 3 && fireTimer >= fireRate && StaticData._haveSword == true)
         {
             Attack newAttack = Instantiate(myAttack, attackAbajo.position, attackArriba.rotation);
 

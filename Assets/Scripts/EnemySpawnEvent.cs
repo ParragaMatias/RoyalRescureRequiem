@@ -95,14 +95,17 @@ public class EnemySpawnEvent : MonoBehaviour, IDamageable
 
     private void SpawnEnemy()
     {
-        _canSpawn = false;
         _anim.SetTrigger(_spawnEventAnim);
-        for (int i = 0; i < _enemyAmmount; i++)
+        float i = 0;
+        while(i < _enemyAmmount)
         {
+            i++;
             _coordinatesX = Random.Range(-4, 4);
             _coordinatesY = Random.Range(-4, 4);
             Instantiate(_enemy, new Vector2(_target.transform.position.x + _coordinatesX, _target.transform.position.y + _coordinatesY), Quaternion.identity);
         }
+
+        _canSpawn = false;
     }
 
 
