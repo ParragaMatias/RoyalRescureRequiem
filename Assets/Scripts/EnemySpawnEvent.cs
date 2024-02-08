@@ -1,9 +1,10 @@
 using Cinemachine.Utility;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditorInternal;
 using UnityEngine;
 
-public class EnemySpawnEvent : MonoBehaviour, IDamageable
+public class EnemySpawnEvent : MonoBehaviour
 {
     [Header("Animator")]
     private Animator _anim;
@@ -24,6 +25,7 @@ public class EnemySpawnEvent : MonoBehaviour, IDamageable
     [SerializeField] private float _cooldown;
 
     [SerializeField] private bool _canSpawn = true, _canMove = false, _canDMG = false;
+    [SerializeField] private Attack _dmg;
 
     private float _coordinatesX, _coordinatesY;
     private int dir = 1;
@@ -40,8 +42,6 @@ public class EnemySpawnEvent : MonoBehaviour, IDamageable
     {
         if (!_isLive) return;
 
-        if(_canSpawn) SpawnEnemy();
-
         if (_eventStart) 
         {
             _eventStart = false;
@@ -57,6 +57,7 @@ public class EnemySpawnEvent : MonoBehaviour, IDamageable
         {
             MoveDown();
         }
+
     }
 
 
@@ -66,12 +67,13 @@ public class EnemySpawnEvent : MonoBehaviour, IDamageable
         _canDMG = false;
         _anim.SetTrigger(_flyEventAnim);
         dir = 1;
-        yield return new WaitForSeconds(1.5f);
-        _canSpawn = true;
+        yield return new WaitForSeconds(2f);
+        _anim.SetTrigger(_spawnEventAnim);
         _anim.SetBool(_flyingBoolAnim, true);
         yield return new WaitForSeconds(_upTime);
         dir = 2;
         _canDMG = true;
+        _canSpawn = false;
         _anim.SetBool(_flyingBoolAnim, false);
         yield return new WaitForSeconds(5f);
         _eventStart = true;
@@ -79,7 +81,7 @@ public class EnemySpawnEvent : MonoBehaviour, IDamageable
 
     private void MoveUp()
     {
-        if(transform.position.y <= _startPosition.transform.position.y + Vector3.up.y * 0.5f)
+        if (transform.position.y <= _startPosition.transform.position.y + Vector3.up.y * 0.5f)
         {
             transform.position += (Vector3.up * _upSpeed * Time.deltaTime);
         }
@@ -93,9 +95,8 @@ public class EnemySpawnEvent : MonoBehaviour, IDamageable
         }
     }
 
-    private void SpawnEnemy()
+    public void SpawnEnemy()
     {
-        _anim.SetTrigger(_spawnEventAnim);
         float i = 0;
         while(i < _enemyAmmount)
         {
@@ -105,11 +106,18 @@ public class EnemySpawnEvent : MonoBehaviour, IDamageable
             Instantiate(_enemy, new Vector2(_target.transform.position.x + _coordinatesX, _target.transform.position.y + _coordinatesY), Quaternion.identity);
         }
 
-        _canSpawn = false;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.layer == 8)
+        {
+            TakeDamage(_dmg.attackDMG);
+        }
     }
 
 
-    public void TakeDamage(int dmg)
+    public void TakeDamage(float dmg)                                                                            
     {
         if (_canDMG)
         {

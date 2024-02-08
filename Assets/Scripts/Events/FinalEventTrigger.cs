@@ -8,6 +8,7 @@ public class FinalEventTrigger : MonoBehaviour
 
     [SerializeField] private FinalBossFloor _floorTrigger;
     [SerializeField] private EnemySpawnEvent _enemyTrigger;
+    [SerializeField] private BrokeFloor _floor;
     [SerializeField] private GameObject _collider;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -16,6 +17,7 @@ public class FinalEventTrigger : MonoBehaviour
         {
             _floorTrigger._isEventOn = true;
             _enemyTrigger._eventStart = true;
+            StaticData._canBroke = true;
             _collider.SetActive(true);
         }
     }
