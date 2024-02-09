@@ -7,7 +7,7 @@ public class Attack : MonoBehaviour
 
     public float lifeTime = 1f;
 
-    public float attackDMG;
+    public float attackDMG = 1f;
 
     void Start()
     {

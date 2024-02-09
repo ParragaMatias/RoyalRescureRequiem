@@ -5,6 +5,7 @@ using UnityEngine;
 public class BrokeFloor : MonoBehaviour
 {
     [SerializeField] private string _animBrokeTriggerName;
+    [SerializeField] private int _enemyLayer;
 
     private Animator _anim;
 
@@ -16,5 +17,10 @@ public class BrokeFloor : MonoBehaviour
     private void Update()
     {
         if (StaticData._canBroke) _anim.SetTrigger(_animBrokeTriggerName);
+    }
+
+    private void OnTriggerStay2D(Collider2D col)
+    {
+        if(col.gameObject.layer == _enemyLayer) Destroy(col.gameObject);
     }
 }

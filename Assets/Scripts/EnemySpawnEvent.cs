@@ -14,7 +14,7 @@ public class EnemySpawnEvent : MonoBehaviour
     [SerializeField] private string _deathEventAnim;
     [SerializeField] private string _flyingBoolAnim;
 
-    [SerializeField] private GameObject _target, _upPosition, _enemy, _startPosition;
+    [SerializeField] private GameObject _target, _enemy, _startPosition;
 
     [Header("Values")]
     [SerializeField] private float _lifePoints;
@@ -26,11 +26,13 @@ public class EnemySpawnEvent : MonoBehaviour
 
     [SerializeField] private bool _canSpawn = true, _canMove = false, _canDMG = false;
     [SerializeField] private Attack _dmg;
+    [SerializeField] private FinalEvent _final;
 
     private float _coordinatesX, _coordinatesY;
     private int dir = 1;
 
-    public bool _isLive = true , _eventStart = false;
+    public bool _isLive = true, _eventStart;
+    public int i = 0;
 
 
     private void Awake()
@@ -42,10 +44,14 @@ public class EnemySpawnEvent : MonoBehaviour
     {
         if (!_isLive) return;
 
-        if (_eventStart) 
+        if (_eventStart)
         {
-            _eventStart = false;
-            StartCoroutine(FinalBattleEvent());
+            while (i < 1)
+            {
+                i++;
+                StartCoroutine(FinalBattleEvent());
+            }
+
         }
 
         if (dir == 1)
@@ -59,8 +65,6 @@ public class EnemySpawnEvent : MonoBehaviour
         }
 
     }
-
-
     private IEnumerator FinalBattleEvent()
     {
         yield return new WaitForSeconds(2f);
@@ -73,10 +77,9 @@ public class EnemySpawnEvent : MonoBehaviour
         yield return new WaitForSeconds(_upTime);
         dir = 2;
         _canDMG = true;
-        _canSpawn = false;
         _anim.SetBool(_flyingBoolAnim, false);
         yield return new WaitForSeconds(5f);
-        _eventStart = true;
+        i = 0;
     }
 
     private void MoveUp()
@@ -112,15 +115,17 @@ public class EnemySpawnEvent : MonoBehaviour
     {
         if(collision.gameObject.layer == 8)
         {
-            TakeDamage(_dmg.attackDMG);
+            TakeDamage(1);
         }
     }
 
 
     public void TakeDamage(float dmg)                                                                            
     {
+        print(dmg);
+
         if (_canDMG)
-        {
+        { 
             _anim.SetTrigger(_dmgEventAnim);
             _lifePoints -= dmg;
             _canDMG = false;
@@ -134,7 +139,16 @@ public class EnemySpawnEvent : MonoBehaviour
 
     private void Die()
     {
+        print("auchi");
         _isLive = false;
         _anim.SetBool(_deathEventAnim, true);
+        StartCoroutine(FinalTrigger());
+
+    }
+
+    private IEnumerator FinalTrigger()
+    {
+        yield return new WaitForSeconds(1.5f);
+        _final._startEvent = true;
     }
 }

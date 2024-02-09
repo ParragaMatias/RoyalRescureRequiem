@@ -5,6 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour, IDamageable, IHeleable
 {
+    [Header("Animator")]
+    [SerializeField] private string _xAxisName;
+    [SerializeField] private string _yAxisName;
+    [SerializeField] private string _isMovingBoolAnimName;
+
+    private Animator _anim;
+
     public float maxLife = 20f;
 
     private float currentLife;
@@ -63,9 +70,12 @@ public class Player : MonoBehaviour, IDamageable, IHeleable
 
     
 
+    
+
     void Awake()
     {
         myAudioSource = GetComponent<AudioSource>();
+        _anim = GetComponent<Animator>();
         
         currentLife = maxLife;
 
@@ -104,29 +114,37 @@ public class Player : MonoBehaviour, IDamageable, IHeleable
         {
             return;
         }
+
+        float AxisV = Input.GetAxisRaw("Vertical");
+
+        float AxisH = Input.GetAxisRaw("Horizontal");
+
+        _anim.SetFloat(_xAxisName, AxisH);
+        _anim.SetFloat(_yAxisName, AxisV);
         
+
         #region MovimientoRestringido a 4 direcciones (no funca)
 
         //if(Input.GetAxisRaw("Horizontal") != 0 && Input.GetAxisRaw("Vertical") != 0)
         //{
-            //transform.position += lastMovement * speed * Time.deltaTime;
-            //return;
+        //transform.position += lastMovement * speed * Time.deltaTime;
+        //return;
         //}
-        
+
         //if(Input.GetAxisRaw("Horizontal") != 0)
         //{
-            //lastMovementDesireX = Input.GetAxisRaw("Horizontal");
-            //transform.position += new Vector3(lastMovementDesireX,0,0) * speed * Time.deltaTime;
-            //lastMovement = new Vector3(lastMovementDesireX, 0, 0);
-            //return;
+        //lastMovementDesireX = Input.GetAxisRaw("Horizontal");
+        //transform.position += new Vector3(lastMovementDesireX,0,0) * speed * Time.deltaTime;
+        //lastMovement = new Vector3(lastMovementDesireX, 0, 0);
+        //return;
         //}
 
         //if(Input.GetAxisRaw("Vertical") != 0)
         //{
-            //lastMovementDesireY = Input.GetAxisRaw("Vertical");
-            //transform.position += new Vector3(0,lastMovementDesireY,0) * speed * Time.deltaTime;
-            //lastMovement = new Vector3(0,lastMovementDesireY, 0);
-            //return;
+        //lastMovementDesireY = Input.GetAxisRaw("Vertical");
+        //transform.position += new Vector3(0,lastMovementDesireY,0) * speed * Time.deltaTime;
+        //lastMovement = new Vector3(0,lastMovementDesireY, 0);
+        //return;
         //}
 
 
@@ -137,17 +155,17 @@ public class Player : MonoBehaviour, IDamageable, IHeleable
 
         #region Attack Direction
 
-        if(Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W))
         {
             attackDirection = 0;
         }
-        
-        if(Input.GetKeyDown(KeyCode.A))
+
+        if (Input.GetKeyDown(KeyCode.A))
         {
             attackDirection = 1;
         }
 
-        if(Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.D))
         {
             attackDirection = 2;
         }
@@ -155,13 +173,13 @@ public class Player : MonoBehaviour, IDamageable, IHeleable
         if(Input.GetKeyDown(KeyCode.S))
         {
             attackDirection = 3;
-        }        
+        }
 
         #endregion
-        
-        #region Ataque en 4 direcciones
 
-        if(Input.GetKeyDown(KeyCode.Mouse0) && attackDirection == 0 && fireTimer >= fireRate && StaticData._haveSword == true)
+            #region Ataque en 4 direcciones
+
+        if (Input.GetKeyDown(KeyCode.Mouse0) && attackDirection == 0 && fireTimer >= fireRate && StaticData._haveSword == true)
         {
             
             Attack newAttack = Instantiate(myAttack, attackArriba.position, attackArriba.rotation);

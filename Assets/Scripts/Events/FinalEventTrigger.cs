@@ -20,5 +20,7 @@ public class FinalEventTrigger : MonoBehaviour
             StaticData._canBroke = true;
             _collider.SetActive(true);
         }
+
+        Destroy(this);
     }
 }
