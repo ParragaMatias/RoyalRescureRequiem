@@ -50,6 +50,9 @@ TagManager:
   - name: Piso
     uniqueID: 1197609263
     locked: 0
+  - name: Pasto
+    uniqueID: 3132103463
+    locked: 0
   - name: Decoracion
     uniqueID: 3794493957
     locked: 0

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,6 +9,16 @@ public class Player : MonoBehaviour, IDamageable, IHeleable
     [Header("Animator")]
     [SerializeField] private string _xAxisName;
     [SerializeField] private string _yAxisName;
+    [SerializeField] private string _lastDirX;
+    [SerializeField] private string _lastDirY;
+    [SerializeField] private string _attackUpTriggerName;
+    [SerializeField] private string _attackDownTriggerName;
+    [SerializeField] private string _attackRightTriggerName;
+    [SerializeField] private string _attackLeftTriggerName;
+    [SerializeField] private string _dmgTriggerName;
+    [SerializeField] private string _lastDirXName;
+    [SerializeField] private string _lastDirYName;
+    [SerializeField] private int _attackLayerIndex;
     [SerializeField] private string _isMovingBoolAnimName;
 
     private Animator _anim;
@@ -115,12 +126,12 @@ public class Player : MonoBehaviour, IDamageable, IHeleable
             return;
         }
 
-        float AxisV = Input.GetAxisRaw("Vertical");
+        float _yAxis = Input.GetAxisRaw("Vertical");
 
-        float AxisH = Input.GetAxisRaw("Horizontal");
+        float _xAxis = Input.GetAxisRaw("Horizontal");
 
-        _anim.SetFloat(_xAxisName, AxisH);
-        _anim.SetFloat(_yAxisName, AxisV);
+        _anim.SetFloat(_xAxisName, _xAxis);
+        _anim.SetFloat(_yAxisName, _yAxis);
         
 
         #region MovimientoRestringido a 4 direcciones (no funca)
@@ -158,21 +169,29 @@ public class Player : MonoBehaviour, IDamageable, IHeleable
         if (Input.GetKeyDown(KeyCode.W))
         {
             attackDirection = 0;
+            _anim.SetInteger(_lastDirY, 1);
+            _anim.SetInteger(_lastDirX, 0);
         }
 
         if (Input.GetKeyDown(KeyCode.A))
         {
             attackDirection = 1;
+            _anim.SetInteger(_lastDirX, -1);
+            _anim.SetInteger(_lastDirY, 0);
         }
 
         if (Input.GetKeyDown(KeyCode.D))
         {
             attackDirection = 2;
+            _anim.SetInteger(_lastDirX, 1);
+            _anim.SetInteger(_lastDirY, 0);
         }
 
         if(Input.GetKeyDown(KeyCode.S))
         {
             attackDirection = 3;
+            _anim.SetInteger(_lastDirY, -1);
+            _anim.SetInteger(_lastDirX, 0);
         }
 
         #endregion
@@ -181,7 +200,7 @@ public class Player : MonoBehaviour, IDamageable, IHeleable
 
         if (Input.GetKeyDown(KeyCode.Mouse0) && attackDirection == 0 && fireTimer >= fireRate && StaticData._haveSword == true)
         {
-            
+            _anim.SetTrigger(_attackUpTriggerName);
             Attack newAttack = Instantiate(myAttack, attackArriba.position, attackArriba.rotation);
 
             isAttacking = true;
@@ -193,10 +212,13 @@ public class Player : MonoBehaviour, IDamageable, IHeleable
             fireTimer = 0;
 
             stopTimer = 0;
+
+
         }
 
         if(Input.GetKeyDown(KeyCode.Mouse0) && attackDirection == 1 && fireTimer >= fireRate && StaticData._haveSword == true)
         {
+            _anim.SetTrigger(_attackLeftTriggerName);
             Attack newAttack = Instantiate(myAttack, attackIzquierda.position, attackArriba.rotation);
 
             isAttacking = true;
@@ -212,6 +234,7 @@ public class Player : MonoBehaviour, IDamageable, IHeleable
         
         if(Input.GetKeyDown(KeyCode.Mouse0) && attackDirection == 2 && fireTimer >= fireRate && StaticData._haveSword == true)
         {
+            _anim.SetTrigger(_attackRightTriggerName);
             Attack newAttack = Instantiate(myAttack, attackDerecha.position, attackArriba.rotation);
 
             isAttacking = true;
@@ -227,6 +250,7 @@ public class Player : MonoBehaviour, IDamageable, IHeleable
 
         if(Input.GetKeyDown(KeyCode.Mouse0) && attackDirection == 3 && fireTimer >= fireRate && StaticData._haveSword == true)
         {
+            _anim.SetTrigger(_attackDownTriggerName);
             Attack newAttack = Instantiate(myAttack, attackAbajo.position, attackArriba.rotation);
 
             isAttacking = true;
@@ -271,8 +295,6 @@ public class Player : MonoBehaviour, IDamageable, IHeleable
 
     }
 
-    
-    
     void FixedUpdate()
     {
         if(isAttacking == true)
@@ -367,6 +389,7 @@ public class Player : MonoBehaviour, IDamageable, IHeleable
     public void TakeDamage(int dmg)
     {
         currentLife -= dmg;
+        _anim.SetTrigger(_dmgTriggerName);
 
         StaticData.lastHealth = currentLife;
 
