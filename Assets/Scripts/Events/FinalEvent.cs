@@ -10,31 +10,45 @@ public class FinalEvent : MonoBehaviour
     [SerializeField] private GameObject _imageToShow;
     [SerializeField] private CanvasAnimation m_Animation;
     [SerializeField] private DespawnEvent _fadeTrigger;
+    [SerializeField] private string _animEventTrigger;
     [SerializeField] private TMP_Text dialogueText;
     [SerializeField, TextArea(4, 6)] private string[] dialogueLines;
     public float dialogueTime;
     private bool didDialogueStart;
     private int lineIndex;
 
-    public bool _startEvent;
+    private Animator _anim;
+
+    public bool _startEvent, _didAnimEnd;
+
+    private void Awake()
+    {
+        _anim = GetComponent<Animator>();
+    }
 
     void Update()
     {
         if (_startEvent)
         {
-            if (!didDialogueStart)
+            _anim.SetTrigger(_animEventTrigger);
+
+            if(_didAnimEnd)
             {
-                StartDialogue();
+                if (!didDialogueStart)
+                {
+                    StartDialogue();
+                }
+                else if (dialogueText.text == dialogueLines[lineIndex] && Input.GetKeyDown(KeyCode.F))
+                {
+                    NextDialogueLine();
+                }
+                else
+                {
+                    StopAllCoroutines();
+                    dialogueText.text = dialogueLines[lineIndex];
+                }
             }
-            else if (dialogueText.text == dialogueLines[lineIndex] && Input.GetKeyDown(KeyCode.F))
-            {
-                NextDialogueLine();
-            }
-            else
-            {
-                StopAllCoroutines();
-                dialogueText.text = dialogueLines[lineIndex];
-            }
+
         }
     }
 
@@ -79,5 +93,10 @@ public class FinalEvent : MonoBehaviour
             dialogueText.text += ch;
             yield return new WaitForSecondsRealtime(dialogueTime);
         }
+    }
+
+    public void AnimCheck()
+    {
+        _didAnimEnd = true;
     }
 }

@@ -23,9 +23,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Continuara.unity
     guid: 3487b8be0002803428496d641e80e517
-  - enabled: 1
-    path: Assets/Scenes/Tutorial.unity
-    guid: d3a6e058a0e83e54293c81cb7bad09fd
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/CasaProta.unity
     guid: 26066d8550588a248963c1d27e563df9
