@@ -6,7 +6,7 @@ public class StaticData
 {
     public static bool castleChecker = false;
 
-    public static bool _haveSword = true, _michiTaim, _canBroke;
+    public static bool _haveSword = false, _michiTaim, _canBroke;
 
     public static float lastHealth;
 
